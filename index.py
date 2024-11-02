@@ -26,3 +26,4 @@ with container:
     st.number_input('Digite o valor a ser investido')
 
 st.write(obter_taxa_selic())
+
