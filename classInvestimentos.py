@@ -1,3 +1,4 @@
+import API_Selic as api
 class Investimentos:
     def __init__(self):
         pass
@@ -12,7 +13,8 @@ class RDBNubank:
         self.data_vencimento = data_vencimento
 
     def calcular_rendimento(self, data_atual):
-        # Lógica para calcular o rendimento considerando o CDI e o período
+        taxa_cdi = api.obter_tava_cdi()
+        print(taxa_cdi)
         pass
 
     def calcular_imposto_de_renda(self):
