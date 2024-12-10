@@ -36,3 +36,13 @@ def obter_taxa_cdi():
     taxa = pd.read_json(url)
     taxa = pd.DataFrame(taxa)
     return taxa
+
+
+def obter_ultima_taxa_cdi():
+    url = 'https://api.bcb.gov.br/dados/serie/bcdata.sgs.4391/dados?formato=json'
+    taxa_por_data = pd.read_json(url)
+    taxa_por_data = pd.DataFrame(taxa_por_data)
+    taxa_por_data = taxa_por_data.sort_values("data")
+    valorIndex = taxa_por_data['valor'].count()
+    ultimaTaxa = taxa_por_data['valor'][valorIndex-1]
+    return ultimaTaxa

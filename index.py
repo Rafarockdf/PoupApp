@@ -15,6 +15,7 @@ def obter_taxa_selic():
         return "Erro ao obter a taxa SELIC"
 
 st.set_page_config(page_title="PoupApp", layout="wide")
+
 st.html("<h1 style='text-align: center'>Digite suas Informações</h1>")
 container = st.container(border=1) 
 barraLateral = st.sidebar
